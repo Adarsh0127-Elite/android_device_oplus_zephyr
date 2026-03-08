@@ -35,9 +35,6 @@ on init
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/top-app/cpus 0-7
 
-    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
-    setprop dalvik.vm.dex2oat-threads 6
-
     # Disable multiple kswapd threads
     write /proc/sys/vm/kswapd_threads 1
 
@@ -47,6 +44,11 @@ on init
 
     # disable khugepaged
     write /sys/kernel/mm/transparent_hugepage/enabled "never"
+
+on post-fs
+    # dex2oat settings
+    setprop dalvik.vm.dex2oat-cpu-set 2,3,4,5
+    setprop dalvik.vm.dex2oat-threads 4
 
 on post-fs-data
     # Disable watermark boost
