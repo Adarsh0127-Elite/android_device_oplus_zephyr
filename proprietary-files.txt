@@ -7,11 +7,18 @@ vendor/lib64/libladder.so
 
 # Audio
 odm/lib64/lib_aurisys_lvimfs.so
+odm/lib64/lib_aurisys_lvacfs.so
+odm/lib64/lib_aurisys_oprec.so;FIX_SONAME
+odm/lib64/lib_lvacfs.so
 odm/lib64/liblvimfs.so
+odm/lib64/liblvacfs_wrapper.so
 odm/lib64/liblvimfs_wrapper.so
 odm/lib64/libnxprecord.so;FIX_SONAME
 odm/lib64/libnxpsmartpaparser.so
 odm/lib64/libnxpspeech.so
+odm/lib64/liboprec.so;FIX_SONAME
+odm/lib64/libsmartpapmparser.so
+vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6895.so
 vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6895.so
 vendor/lib64/hw/sound_trigger.primary.default.so
