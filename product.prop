@@ -20,5 +20,8 @@ ro.oplus.radio.sub_slot_support_sa=0
 ro.vendor.mtk_md3_support=0
 ro.vendor.mtk_mobile_management=0
 
+# MTE
+ro.arm64.memtag.bootctl_supported=1
+
 # SKU
 ro.boot.hardware.sku=pickle
