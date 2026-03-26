@@ -85,8 +85,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcamera_metadata_shim.so')
         .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service': blob_fixup()
-        .replace_needed('libutils.so', 'libutils-v32.so')
-        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),    
+        .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so') 
         .binary_regex_replace(b'/my_product/vendor/etc/cust_silky_brightness_%s_%s.xml', b'/vendor/etc/cust_silky_brightness_%s_%s.xml\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
