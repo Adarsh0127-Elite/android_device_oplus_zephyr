@@ -152,7 +152,8 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
-# IMS
+# Radio
+$(call inherit-product, hardware/lineage/compat/frameworks/compat.mk)
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
 $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
