@@ -153,6 +153,8 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek-recovery
 
 # Radio
+ENABLE_VENDOR_RIL_SERVICE := true
+
 $(call inherit-product, hardware/lineage/compat/frameworks/compat.mk)
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
@@ -219,14 +221,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
 PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \
     OPlusNfcResTarget \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
-    OPlusTetheringConfigResTarget \
-    OPlusWifiResTarget
+    OPlusTetheringConfigResTarget
 
 PRODUCT_PACKAGES += \
     ApertureResTarget \
