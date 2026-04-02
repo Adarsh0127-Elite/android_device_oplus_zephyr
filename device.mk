@@ -223,6 +223,9 @@ PRODUCT_COPY_FILES += \
 # Overlays
 $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay-lineage
+
 PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \
     OPlusNfcResTarget \
@@ -230,13 +233,6 @@ PRODUCT_PACKAGES += \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
     OPlusTetheringConfigResTarget
-
-PRODUCT_PACKAGES += \
-    ApertureResTarget \
-    LineageSDKResTarget \
-    LineageSettingsProviderResTarget \
-    OplusDozeResTarget \
-    LineageSystemUIResTarget
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
