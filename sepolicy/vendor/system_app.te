@@ -1,0 +1,4 @@
+# Charge bypass
+allow system_app vendor_sysfs_usb_supply:file w_file_perms;
+
+# Gamespace

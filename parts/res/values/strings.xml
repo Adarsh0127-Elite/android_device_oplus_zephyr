@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020-2022 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <!-- Device specific settings -->
+    <string name="device_settings_app_name">Advanced settings</string>
+
+    <!-- Bypass charging strings -->
+    <string name="bypass_charging_title">Bypass charging</string>
+    <string name="bypass_charging_summary">Supply power directly to the phone</string>
+    <string name="bypass_charging_info_title">Bypass charging supplies power directly to the board, instead of the battery, helping to reduce device heat, when running demanding applications like games.</string>
+    <string name="bypass_charging_unavailable">Bypass charging is not supported on this device</string>
+    <string name="bypass_charging_enabled">Enabled</string>
+    <string name="bypass_charging_disabled">Disabled</string>
+    <string name="bypass_charging_error">Coudn\'t enable Bypass Charging.</string>
+
+    <!-- Per-app refresh rate -->
+    <string name="refresh_title">Per-app refresh rate</string>
+    <string name="refresh_summary">Set the maximum refresh rate for a specific application</string>
+    <string name="refresh_default">Default</string>
+    <string name="refresh_rate_tile_title">Refresh Rate</string>
+
+    <!-- GameBar Overlay -->
+    <string name="game_bar_title">GameBar</string>
+    <string name="game_bar_summary">Enable the system overlay (FPS, Temp, etc.)</string>
+    <string name="overlay_permission_required">Overlay permission is required</string>
+    <string name="overlay_permission_granted">Overlay permission granted</string>
+    <string name="overlay_permission_denied">Overlay permission denied</string>
+    <string name="game_bar_tile_label">GameBar</string>
+    <string name="game_bar_tile_description">Toggle the game overlay</string>
+</resources>
