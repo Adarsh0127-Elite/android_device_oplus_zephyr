@@ -11,7 +11,6 @@ gz.img;AB
 lk.img;AB
 mcf_ota.img;AB
 mcupm.img;AB
-md1img.img;AB
 mvpu_algo.img;AB
 pi_img.img;AB
 scp.img;AB
