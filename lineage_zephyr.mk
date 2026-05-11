@@ -10,7 +10,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_BRAND := Oplus
 PRODUCT_DEVICE := zephyr
 PRODUCT_MANUFACTURER := Oplus
-PRODUCT_MODEL := PGKM10
+PRODUCT_MODEL := mt6895
 PRODUCT_NAME := lineage_zephyr
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
