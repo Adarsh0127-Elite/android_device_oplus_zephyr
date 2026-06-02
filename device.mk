@@ -140,6 +140,10 @@ PRODUCT_COPY_FILES += \
 # FOD
 $(call soong_config_set,surfaceflinger,udfps_lib,libudfps_extension.oplus)
 
+# Fingerprint
+$(call soong_config_set_bool,surfaceflinger,has_mtk_udfps,true)
+$(call soong_config_set,surfaceflinger,mtk_dim_layer,OnScreenFingerprintPressedIcon)
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
