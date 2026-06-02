@@ -4,7 +4,7 @@ echo "Applying frameworks/native patches"
 cd frameworks/native
 echo "Applying Add MTK GED KPI support to fix broken Mediatek gpufreq"
 git fetch https://github.com/Adarsh0127-Elite/android_frameworks_native.git
-git cherry-pick 0f64f8863865458374c1039426fd056a966e7c48
+git cherry-pick f27b7054644dadb1f08a5f421a52420d828b10a3
 cd ../..
 
 echo "Clonning IMS"
