@@ -15,3 +15,9 @@ git clone https://github.com/Adarsh0127-Elite/android_vendor_lineage-priv_keys-t
 cd vendor/lineage-priv/keys
 echo "no" | ./generate.sh
 cd ../../..
+
+echo "Unlock 4K60FPS"
+cd packages/apps/Aperture
+git fetch https://github.com/Adarsh0127-Elite/android_packages_apps_Aperture.git
+git cherry-pick 9509277efc852ad8bdcce204e0d9cfe104b6d190
+cd ../../..
