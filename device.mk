@@ -176,6 +176,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
+    chipinfo \
     fstab.enableswap \
     fstab.mt6895 \
     fstab.mt6895.vendor_ramdisk \
