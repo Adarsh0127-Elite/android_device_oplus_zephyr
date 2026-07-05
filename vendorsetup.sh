@@ -1,20 +1,10 @@
 #!/bin/bash
 
-echo "Applying frameworks/native patches"
-cd frameworks/native
-echo "Applying Add MTK GED KPI support to fix broken Mediatek gpufreq"
-git fetch https://github.com/Adarsh0127-Elite/android_frameworks_native.git
-git cherry-pick f27b7054644dadb1f08a5f421a52420d828b10a3
-cd ../..
-
 echo "Clonning IMS"
 git clone -b android-16-qpr2 https://github.com/Adarsh0127-Elite/android_vendor_mediatek_ims.git vendor/mediatek/ims
 
-echo "Clonning Private keys"
-git clone -b lunaris https://github.com/Adarsh0127-Elite/vendor_lineage-priv_keys-template vendor/lunaris-priv/keys
-cd vendor/lunaris-priv/keys
-./keys.sh
-cd ../../..
+echo "Cloning BCR"
+git clone https://github.com/Chaitanyakm/vendor_bcr.git vendor/bcr
 
 echo "Unlock 4K60FPS"
 cd packages/apps/Aperture

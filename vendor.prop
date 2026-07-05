@@ -128,6 +128,9 @@ drm.service.enabled=true
 persist.vendor.connsys.fm_chipid=mt6635
 ro.vendor.fm.platform=connac2x
 
+# FRP
+ro.frp.pst=/dev/block/by-name/frp
+
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
 
@@ -168,9 +171,6 @@ vendor.mtk.vdec.waitkeyframeforplay=15
 
 # Netflix
 ro.netflix.bsp_rev=MTK6895-35027-1
-
-# Performance
-vendor.perf.framepacing.enable=1
 
 # Neural Networks
 ro.vendor.mtk_nn_baseline_support=1
@@ -278,9 +278,6 @@ vendor.connsys.driver.ready=no
 vendor.rild.libpath=mtk-ril.so
 vendor.rild.libargs=-d /dev/ttyC0
 
-# USB
-vendor.usb.controller=11201000.usb0
-
 # Sensors
 ro.vendor.mtk.sensor.support=yes
 
@@ -310,7 +307,7 @@ ro.vendor.wlan.gen=gen4m_6895
 # Zygote
 zygote.critical_window.minute=10
 
-# GPU
+#GPU
 persist.sys.phh.mtk_ged_kpi=1
 
 # Increase max cached processes

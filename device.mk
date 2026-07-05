@@ -1,4 +1,3 @@
-# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -75,6 +74,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
+#BCR support 
+$(call inherit-product, vendor/bcr/bcr.mk)
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -134,6 +136,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Fingerprint
+$(call soong_config_set_bool,surfaceflinger,has_mtk_udfps,true)
+$(call soong_config_set,surfaceflinger,mtk_dim_layer,OnScreenFingerprintPressedIcon)
+
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.oplus
 
@@ -142,10 +148,6 @@ PRODUCT_COPY_FILES += \
 
 # FOD
 $(call soong_config_set,surfaceflinger,udfps_lib,libudfps_extension.oplus)
-
-# Fingerprint
-$(call soong_config_set_bool,surfaceflinger,has_mtk_udfps,true)
-$(call soong_config_set,surfaceflinger,mtk_dim_layer,OnScreenFingerprintPressedIcon)
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -163,16 +165,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
-# Radio
-ENABLE_VENDOR_RIL_SERVICE := true
-
-$(call inherit-product, hardware/lineage/compat/frameworks/compat.mk)
+# IMS
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
 $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
-
-PRODUCT_PACKAGES += \
-    mdota_symlink
 
 # Init
 PRODUCT_PACKAGES += \
@@ -235,11 +231,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
 # Overlays
-$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
-
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay-lineage
-
 PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \
     OPlusNfcResTarget \
@@ -247,7 +238,15 @@ PRODUCT_PACKAGES += \
     OPlusSettingsProviderRes80w \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
-    OPlusTetheringConfigResTarget
+    OPlusTetheringConfigResTarget \
+    OPlusWifiResTarget
+
+PRODUCT_PACKAGES += \
+    ApertureResTarget \
+    LineageSDKResTarget \
+    LineageSettingsProviderResTarget \
+    OplusDozeResTarget \
+    LineageSystemUIResTarget
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -269,7 +268,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Properties
-include hardware/mediatek/configs/properties/vendor_logtag.mk
+include $(DEVICE_PATH)/vendor_logtag.mk
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -376,5 +375,5 @@ PRODUCT_COPY_FILES += \
 # Inherit the proprietary files
 $(call inherit-product, vendor/oplus/zephyr/zephyr-vendor.mk)
 
-# Include keys
--include vendor/lunaris-priv/keys/keys.mk
+#GPU
+$(call soong_config_set_bool,libgui,support_mtk_ged_kpi,true)
