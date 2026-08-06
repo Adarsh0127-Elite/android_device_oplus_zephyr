@@ -30,7 +30,7 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    ('android.frameworks.displayservice@1.0', 'libsink', 'libmnl'): lib_fixup_remove,
+    ('android.frameworks.displayservice@1.0', 'libsink'): lib_fixup_remove,
     'libformatter': lib_fixup_vendor_suffix,
 }
 
