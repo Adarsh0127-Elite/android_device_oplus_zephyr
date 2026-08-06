@@ -24,10 +24,16 @@ namespace_imports = [
     'hardware/oplus',
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    ('libsink',): lib_fixup_remove,
+    ('android.frameworks.displayservice@1.0', 'libsink', 'libmnl'): lib_fixup_remove,
+    'libformatter': lib_fixup_vendor_suffix,
 }
+
 
 
 blob_fixups: blob_fixups_user_type = {
@@ -100,8 +106,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
-    'vendor/lib64/mt6895/libmnl.so': blob_fixup()
-        .add_needed('libcutils.so'),
     'vendor/lib64/mt6895/libmtkcam_stdutils.so': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
 }  # fmt: skip
