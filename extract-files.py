@@ -24,11 +24,16 @@ namespace_imports = [
     'hardware/oplus',
 ]
 
+
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     ('libsink',): lib_fixup_remove,
+    ('libmnl',): lib_fixup_vendor_suffix,
 }
-
 
 blob_fixups: blob_fixups_user_type = {
     'odm/bin/hw/android.hardware.ir-service': blob_fixup()
