@@ -483,7 +483,6 @@ odm/lib64/mt6895/imx766_mipi_raw_21861_IdxMgr.so;SYMLINK=odm/lib64/imx766_mipi_r
 odm/lib64/mt6895/imx766_mipi_raw_21861_tuning.so;SYMLINK=odm/lib64/imx766_mipi_raw_21861_tuning.so
 odm/lib64/mt6895/s5k3p9sp_mipi_raw_21861_IdxMgr.so;SYMLINK=odm/lib64/s5k3p9sp_mipi_raw_21861_IdxMgr.so
 odm/lib64/mt6895/s5k3p9sp_mipi_raw_21861_tuning.so;SYMLINK=odm/lib64/s5k3p9sp_mipi_raw_21861_tuning.so
-odm/lib64/vendor.oplus.hardware.cameraextension-V1-ndk_platform.so;MODULE_SUFFIX=_odm
 odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so;MODULE_SUFFIX=_odm
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
 odm/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk_platform.so;MODULE_SUFFIX=_odm
@@ -842,7 +841,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
-vendor/lib64/vendor.oplus.hardware.cameraextension-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk_platform.so
 
@@ -1060,7 +1058,6 @@ odm/lib64/anc.hal.so
 odm/lib64/hw/fingerprint.goodix_G3.default.so
 odm/lib64/libgf_hal_G3.so
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so;MODULE_SUFFIX=_odm
-odm/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
