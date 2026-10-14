@@ -31,7 +31,10 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    ('libsink',): lib_fixup_remove,
+    (
+        'android.frameworks.displayservice@1.0',
+        'libsink',
+    ): lib_fixup_remove,
     (
         'libformatter',
         'libmnl',
@@ -159,6 +162,9 @@ blob_fixups: blob_fixups_user_type = {
 
     'vendor/lib64/mt6895/libmtkcam_stdutils.so': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
+
+    'vendor/lib64/mt6895/libmtkcam_hal_android_app_cbadaptor.so': blob_fixup()
+        .remove_needed('android.frameworks.displayservice@1.0.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
