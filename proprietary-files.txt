@@ -972,7 +972,6 @@ vendor/lib64/mt6895/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
 # Display (CWB)
 vendor/etc/vintf/manifest/manifest_oplus_cwb.xml
 vendor/lib64/libcwb_mtk_hidl.so
-vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
 
 # Display (Mediatek)
 vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
