@@ -990,7 +990,6 @@ vendor/lib64/mt6895/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # Display (PanelChaplin)
-odm/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
 vendor/lib64/libPanelChaplin_wrapper.so
 vendor/lib64/vendor.display.PanelChaplin@1.0.so
 
