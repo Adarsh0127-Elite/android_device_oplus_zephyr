@@ -1319,7 +1319,6 @@ odm/lib64/vendor.oplus.hardware.urcc-V1-ndk_platform.so
 vendor/etc/init/bootperf.rc
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
-vendor/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so
 
 # Radio
 odm/etc/ecc_list.xml
